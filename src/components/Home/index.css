@@ -1,0 +1,14 @@
+/* Write your CSS here */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.container {
+  background-image: linear-gradient(#2b2c49, #b5b9ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
