@@ -1,5 +1,6 @@
 // Write your code here
 import {Component} from 'react'
+import Message from '../Message'
 import './index.css'
 
 class Login extends Component {
@@ -14,11 +15,10 @@ class Login extends Component {
     }
 
     return (
-      {!btnClicked && (
+        <Message ci={btnClicked}/> 
         <div className="btn">
-          <button type="button" onClick={this.changeState}>{btnTxt}</button>
-        </div>}
-      )
+          {!btnClicked &&<button type="button" onClick={this.changeState}>{btnTxt}</button>}
+        </div>
     )
   }
 }

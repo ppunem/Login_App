@@ -1,5 +1,6 @@
 // Write your code here
 import {Component} from 'react'
+import Message from '../Message'
 import './index.css'
 
 class Logout extends Component {
@@ -14,6 +15,7 @@ class Logout extends Component {
     const {btnTxt, btnClicked} = this.state
 
     return (
+        <Message co={btnClicked}/>
         {btnClicked && <div className="btn">
         <button type="button" onClick={this.changeBtnClick}>{btnTxt}</button>
       </div>}
