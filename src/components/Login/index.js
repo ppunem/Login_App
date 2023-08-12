@@ -4,21 +4,26 @@ import Message from '../Message'
 import './index.css'
 
 class Login extends Component {
-  state = {btnTxt: 'Login', btnClicked: False}
+  state = {btnTxt: 'Login', btnClicked: 'False'}
 
   render() {
     const {btnTxt, btnClicked} = this.state
-    
-    changeState=()=>{
-        const {btnClicked}=this.state
-        this.setState({btnClicked:True})
+
+    const changeState = () => {
+      this.setState({btnClicked: 'True'})
     }
 
     return (
-        <Message ci={btnClicked}/> 
+      <>
+        <Message ci={btnClicked} />
         <div className="btn">
-          {!btnClicked &&<button type="button" onClick={this.changeState}>{btnTxt}</button>}
+          {!btnClicked && (
+            <button type="button" onClick={this.changeState}>
+              {btnTxt}
+            </button>
+          )}
         </div>
+      </>
     )
   }
 }
